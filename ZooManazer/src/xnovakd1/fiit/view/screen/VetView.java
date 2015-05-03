@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import xnovakd1.fiit.model.Commands;
 import xnovakd1.fiit.model.context.Context;
 import xnovakd1.fiit.model.problem.InjuryProblem;
+import xnovakd1.fiit.model.problem.DirtProblem;
 import xnovakd1.fiit.model.problem.Problem;
 import xnovakd1.fiit.model.problem.Tasks;
 
@@ -39,9 +40,11 @@ public class VetView extends TaskListView {
             try {
                 if (select != -1) {
                     Tasks.getInstance().remove(list2.remove(select));
+                    Tasks.getInstance().add(new DirtProblem("spina"));
                     login.getLoggedUser().interpret(Commands.TASK_RESOLVE);
                 } else {
                     Tasks.getInstance().remove(list2.remove(0));
+                    Tasks.getInstance().add(new DirtProblem("spina"));
                     login.getLoggedUser().interpret(Commands.TASK_RESOLVE);
                 }
             } catch (IndexOutOfBoundsException ex) {

@@ -6,6 +6,7 @@ public class DirtProblem extends Problem{
 	
 
 	private String district;
+	private String description;
 
 	public DirtProblem() {
 		super();
@@ -17,10 +18,15 @@ public class DirtProblem extends Problem{
 			district = "Vychodna";
 		else if(randomInt >= 0)
 			district = "Zapadna";
+		this.description = district + " cast Zoo je spinava";
 	}
-
+	
+	public DirtProblem(String description){
+		this.description = "Vznikol neporiadok po veterinarovi";
+	}
 
 	public String toString() {
-		return district + " cast zoo je spinava";
+		return description;
 	}
 }
+	
