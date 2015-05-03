@@ -8,7 +8,11 @@ import xnovakd1.fiit.model.Commands;
 import xnovakd1.fiit.model.context.Context;
 import xnovakd1.fiit.model.problem.Problem;
 import xnovakd1.fiit.model.problem.Tasks;
-
+/**
+ * V tejto triede, BossView mam implementovane tri tlacidla,
+ * kazde generuje ulohu inemu pracovnikovi
+ *   
+ */
 
 public class BossView extends TaskListView {
 

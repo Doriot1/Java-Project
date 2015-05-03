@@ -6,8 +6,9 @@ import xnovakd1.fiit.model.context.Context;
 import xnovakd1.fiit.view.screen.MainScreen;
 
 /**
-
-nieco
+ * Trieda Zoo extenduje Application (musim, kedze pouzivam JavaFX).
+ * Vytvorim si tu MainScreen, moj zakladny View z ktoreho dalej 
+ * riadim aplikaciu.
  */
 
 public class Zoo extends Application {

@@ -11,6 +11,9 @@ import xnovakd1.fiit.view.BasicView;
 
 /**
  * Created by Daniel on 26.4.2015.
+ * TaskListView extenduje BasicView a prekonava setCellFactory,
+ * ktory vytvara celly, ktore potom naplnam v BossView. Janitor Plumber a Vet Views
+ * maju implementovane setOnAction Tlacidla na prijimanie a riesenie uloh.
  */
 public class TaskListView extends BasicView{
 

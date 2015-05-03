@@ -14,6 +14,15 @@ import xnovakd1.fiit.model.user.Plumber;
 import xnovakd1.fiit.model.user.Vet;
 import xnovakd1.fiit.view.BasicView;
 
+/**
+ * MainScreen je View ktory vidime, ked spustime aplikaciu. Mame
+ * v nom potrebne prvky vytvorene a inicializovane, zahrna graficky
+ * prihlasovanie a registraciu, taktiez obrazok, ktory ma licencne povolene
+ * znovu pouzitie za edukacnym cielom. 
+ * Po zadani prihlasovacieho mena sa da prihlasit aj stlacenim Enteru,
+ * a vratit sa naspat do tohto view sa da stlacenim Back_SPACE.
+ */
+
 public class MainScreen extends BasicView {
     public TextField loginText;
     public TextField registerText;

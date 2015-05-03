@@ -15,32 +15,29 @@ import xnovakd1.fiit.model.problem.Tasks;
 
 public class Boss implements LoggedUser {
 
-    private Tasks list;                                                // agregacia
+	private Tasks list; 													// agregacia
 
-    public Boss() {
+	public Boss() {
 
-        list = Tasks.getInstance();
-        System.out.println("Prihlasil sa Boss");
-    }
+		list = Tasks.getInstance();
+		System.out.println("Prihlasil sa Boss");
+	}
 
+	public void interpret(Commands command) {
+		if (command == Commands.GENERATE_TASK_VET) {
+			System.out.println("Bola vytvorena uloha pre veterinara");
+			list.add(new InjuryProblem()); 									// vyuzitie agregovaneho objektu
+		}
 
-    
-    public void interpret(Commands command) {
-        if (command == Commands.GENERATE_TASK_VET) {
-            System.out.println("Bola vytvorena uloha pre veterinara");
-            list.add(new InjuryProblem());                                  // vyuzitie agregovaneho objektu
-        }
+		if (command == Commands.GENERATE_TASK_PLUMBER) {
+			System.out.println("Bola vytvorena uloha pre instalatera");
+			list.add(new DamagedPipe()); 									// vyuzitie agregovaneho objektu
+		}
 
-        if (command == Commands.GENERATE_TASK_PLUMBER) {
-            System.out.println("Bola vytvorena uloha pre instalatera");
-            list.add(new DamagedPipe());                                  // vyuzitie agregovaneho objektu
-        }
-
-        if (command == Commands.GENERATE_TASK_JANITOR) {
-            System.out.println("Bola vytvorena uloha pre upratovaca");
-            list.add(new DirtProblem());                                  // vyuzitie agregovaneho objektu
-        }
-    }
-
+		if (command == Commands.GENERATE_TASK_JANITOR) {
+			System.out.println("Bola vytvorena uloha pre upratovaca");
+			list.add(new DirtProblem()); 									// vyuzitie agregovaneho objektu
+		}
+	}
 
 }
