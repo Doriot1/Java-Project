@@ -24,7 +24,7 @@ public class Boss implements LoggedUser {
     }
 
 
-    @Override
+    
     public void interpret(Commands command) {
         if (command == Commands.GENERATE_TASK_VET) {
             System.out.println("Bola vytvorena uloha pre veterinara");
